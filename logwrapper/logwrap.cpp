@@ -34,6 +34,8 @@
 #include <log/log.h>
 #include <logwrap/logwrap.h>
 
+#include <basename.h>
+
 static pthread_mutex_t fd_mutex = PTHREAD_MUTEX_INITIALIZER;
 // Protected by fd_mutex.  These signals must be blocked while modifying as well.
 static pid_t child_pid;
