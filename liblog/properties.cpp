@@ -30,6 +30,10 @@
 
 #include "logger_write.h"
 
+#if !defined(__BUILD_FOR_HOST)
+#define __ANDROID__
+#endif
+
 #ifdef __ANDROID__
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
